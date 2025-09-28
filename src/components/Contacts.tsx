@@ -6,26 +6,26 @@ const Contacts = () => {
     {
       icon: Phone,
       title: 'телефон',
-      value: '+375 (XX) XXX-XX-XX', // ЗАМЕНИТЬ: Вставить реальный номер
-      href: 'tel:+375XXXXXXXXX'
+      value: '+375 (29) 196-41-54', // ЗАМЕНИТЬ: Вставить реальный номер
+      href: 'tel:+375291964154'
     },
     {
       icon: MapPin,
       title: 'адрес',
-      value: 'Заславль, ул. Примерная, 123', // ЗАМЕНИТЬ: Вставить реальный адрес
+      value: 'Заславль, ул. Советская, дом 112/Б, 1 этаж', // ЗАМЕНИТЬ: Вставить реальный адрес
       href: '#'
     },
     {
       icon: Mail,
       title: 'почта',
-      value: 'info@balcony.by', // ЗАМЕНИТЬ: Вставить реальную почту
-      href: 'mailto:info@balcony.by'
+      value: 'orfumgroup@gmail.com', // ЗАМЕНИТЬ: Вставить реальную почту
+      href: 'mailto:orfumgroup@gmail.com'
     },
     {
       icon: Instagram,
       title: 'instagram',
-      value: 'balcony.cafe', // ЗАМЕНИТЬ: Вставить реальный Instagram
-      href: 'https://instagram.com/balcony.cafe'
+      value: 'balcony_by', // ЗАМЕНИТЬ: Вставить реальный Instagram
+      href: 'https://www.instagram.com/balcony_by?igsh=emxsc3JidTFrOTJn'
     }
   ]
 

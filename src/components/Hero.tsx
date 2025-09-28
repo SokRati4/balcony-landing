@@ -29,11 +29,11 @@ const Hero = () => {
           className="space-y-8"
         >
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-brandPrimary-900 leading-tight">
-            Доставка корпоративных обедов в офис
+            Доставка корпоративного питания
           </h1>
           
           <p className="text-xl text-brandPrimary-600 leading-relaxed mb-8">
-            Вкусные обеды для продуктивного дня в офисе
+            Вкусные обеды для продуктивного дня на работе
           </p>
 
           {/* Features */}

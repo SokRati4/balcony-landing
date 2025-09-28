@@ -1,4 +1,5 @@
 import { motion } from 'framer-motion'
+import bePaidLogo from '../assets/bePaid.png'
 
 const Footer = () => {
   return (
@@ -16,23 +17,20 @@ const Footer = () => {
             Балконы
           </div>
           
-          <p className="text-brandPrimary-400 mb-6">
-            Столовая "Балконы" - качественное корпоративное питание в Заславле
-          </p>
-          
-          <div className="flex justify-center space-x-6 mb-8">
-            <a href="#" className="text-brandPrimary-400 hover:text-brandPrimary-700 transition-colors duration-200">
-              Политика конфиденциальности
-            </a>
-            <a href="#" className="text-brandPrimary-400 hover:text-brandPrimary-700 transition-colors duration-200">
-              Условия использования
-            </a>
+          <div className="mt-8 pt-8 border-t border-brandPrimary-800 text-brandPrimary-500 text-sm leading-relaxed">
+            <h3 className="text-lg font-semibold text-brandSecondary mb-4">Юридическая информация</h3>
+            <p>
+              Общество с ограниченной ответственностью "Орфум Групп Плюс"<br />
+              УНП: 693340227<br />
+              Регистрирующий орган: Минский районный исполнительный комитет<br />
+              Дата регистрации: 29.10.2024<br />
+              Адрес: г. Заславль, улица Советская, дом 112/Б, 1 этаж<br />
+              Режим работы: 11:00-16:00
+            </p>
           </div>
           
-          <div className="border-t border-brandPrimary-800 pt-8">
-            <p className="text-brandPrimary-500 text-sm">
-              © 2024 Столовая "Балконы". Все права защищены.
-            </p>
+          <div className="mt-8 pt-8 border-t border-brandPrimary-800">
+            <img src={bePaidLogo} alt="bePaid Logo" className="mx-auto h-8" />
           </div>
         </motion.div>
       </div>
