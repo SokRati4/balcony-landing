@@ -42,7 +42,7 @@ const Header = () => {
             <Phone className="w-4 h-4 mr-2" />
             <span className="text-sm">
               {/* ЗАМЕНИТЬ: Вставить реальный номер телефона */}
-              +375 (29) 383-95-04
+              +375 (29) 196-41-54
             </span>
           </div>
 
