@@ -6,25 +6,25 @@ const Contacts = () => {
     {
       icon: Phone,
       title: 'телефон',
-      value: '+375 (29) 196-41-54', // ЗАМЕНИТЬ: Вставить реальный номер
-      href: 'tel:+375291964154'
+      value: '+375 (29) 383-95-04',
+      href: 'tel:+375293839504'
     },
     {
       icon: MapPin,
       title: 'адрес',
-      value: 'Заславль, ул. Советская, дом 112/Б, 1 этаж', // ЗАМЕНИТЬ: Вставить реальный адрес
-      href: '#'
+      value: 'Заславль, ул. Советская, дом 112/Б, 1 этаж',
+      href: 'https://yandex.by/maps/?mode=search&text=%D0%97%D0%B0%D1%81%D0%BB%D0%B0%D0%B2%D0%BB%D1%8C,%20%D1%83%D0%BB.%20%D0%A1%D0%BE%D0%B2%D0%B5%D1%82%D1%81%D0%BA%D0%B0%D1%8F,%20%D0%B4%D0%BE%D0%BC%20112/%D0%91,%201%20%D1%8D%D1%82%D0%B0%D0%B6'
     },
     {
       icon: Mail,
       title: 'почта',
-      value: 'orfumgroup@gmail.com', // ЗАМЕНИТЬ: Вставить реальную почту
+      value: 'orphumgroup@gmail.com',
       href: 'mailto:orfumgroup@gmail.com'
     },
     {
       icon: Instagram,
       title: 'instagram',
-      value: 'balcony_by', // ЗАМЕНИТЬ: Вставить реальный Instagram
+      value: 'balcony_by',
       href: 'https://www.instagram.com/balcony_by?igsh=emxsc3JidTFrOTJn'
     }
   ]

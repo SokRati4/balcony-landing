@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion'
-import bePaidLogo from '../assets/bePaid.png'
+import bePaidLogos from '../assets/bePaidLogos.png'
 
 const Footer = () => {
   return (
@@ -12,13 +12,14 @@ const Footer = () => {
           viewport={{ once: true }}
           className="text-center"
         >
+          {/*
           <div className="text-2xl font-bold text-brandPrimary-400 mb-4">
-            {/* ЗАМЕНИТЬ: Вставить логотип столовой "Балконы" */}
+             ЗАМЕНИТЬ: Вставить логотип столовой "Балконы" 
             Балконы
           </div>
-          
-          <div className="mt-8 pt-8 border-t border-brandPrimary-800 text-brandPrimary-500 text-sm leading-relaxed">
-            <h3 className="text-lg font-semibold text-brandSecondary mb-4">Юридическая информация</h3>
+          */}
+          <div className="mt-8 mx-[calc(50%-50vw)] border-t border-brandPrimary-800"></div>
+          <div className="pt-8 text-brandPrimary-500 text-sm leading-relaxed">
             <p>
               Общество с ограниченной ответственностью "Орфум Групп Плюс"<br />
               УНП: 693340227<br />
@@ -28,9 +29,10 @@ const Footer = () => {
               Режим работы: 11:00-16:00
             </p>
           </div>
-          
-          <div className="mt-8 pt-8 border-t border-brandPrimary-800">
-            <img src={bePaidLogo} alt="bePaid Logo" className="mx-auto h-8" />
+
+          <div className="mt-8 mx-[calc(50%-50vw)] border-t border-brandPrimary-800"></div>
+          <div className="pt-8">
+            <img src={bePaidLogos} alt="bePaid Logo" className="mx-auto h-12 md:h-16 px-3" />
           </div>
         </motion.div>
       </div>

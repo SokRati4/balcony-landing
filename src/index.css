@@ -4,13 +4,22 @@
 @tailwind utilities;
 
 @layer base {
+  :root {
+    /* Fallback for initial load before JS measures header */
+    --header-height: 8rem;
+  }
+
   html {
     scroll-behavior: smooth;
   }
-  
+
   body {
     font-family: 'Inter', system-ui, sans-serif;
     line-height: 1.6;
+  }
+
+  section[id] {
+    scroll-margin-top: var(--header-height);
   }
 }
 
@@ -18,15 +27,15 @@
   .btn-primary {
     @apply bg-brandPrimary-900 hover:bg-brandPrimary-700 text-white font-medium px-6 py-3 rounded-lg transition-colors duration-200;
   }
-  
+
   .btn-secondary {
     @apply bg-brandSecondary hover:bg-brandPrimary-50 text-brandPrimary-900 font-medium px-6 py-3 rounded-lg border border-brandPrimary-900 transition-colors duration-200;
   }
-  
+
   .section-padding {
     @apply py-16 px-4 sm:px-6 lg:px-8;
   }
-  
+
   .container-custom {
     @apply max-w-7xl mx-auto;
   }

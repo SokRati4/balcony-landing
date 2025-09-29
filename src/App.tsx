@@ -1,6 +1,5 @@
-import React, { useState } from 'react'
 import Header from './components/Header'
-import Hero from './components/Hero'
+import About from './components/About'
 import Advantages from './components/Advantages'
 import Menu from './components/Menu'
 import Process from './components/Process'
@@ -11,13 +10,13 @@ function App() {
   return (
     <div className="min-h-screen bg-brandSecondary">
       <Header />
-      <Hero />
+      <About />
       <Advantages />
       <Menu />
       <Process />
       <Contacts />
       <Footer />
-      
+
     </div>
   )
 }

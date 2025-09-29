@@ -47,8 +47,8 @@ const advantages = [
 
 const Advantages = () => {
   return (
-    <section className="section-padding bg-white">
-      <div className="container-custom">
+    <section className="section-padding bg-white py-8 md:py-16">
+      <div className="container-custom ">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {advantages.map((advantage, index) => (
             <motion.div

@@ -29,7 +29,7 @@ const processSteps = [
 
 const Process = () => {
   return (
-    <section id="process" className="section-padding bg-brandSecondary">
+    <section id="how-we-work" className="section-padding bg-brandSecondary py-8 md:py-16">
       <div className="container-custom">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
@@ -52,7 +52,7 @@ const Process = () => {
             viewport={{ once: true }}
             className="hidden lg:block absolute h-0.5 bg-brandPrimary-200 top-1/3 left-20 right-20 -translate-y-1/2"
           ></motion.div>
-          
+
           {processSteps.map((step, index) => (
             <motion.div
               key={step.step}
@@ -65,13 +65,13 @@ const Process = () => {
               <div className="w-16 h-16 bg-brandPrimary-900 text-brandSecondary rounded-full flex items-center justify-center mx-auto mb-6 text-2xl font-bold border-4 border-brandSecondary shadow-md">
                 {step.step}
               </div>
-              
+
               <div className="text-3xl mb-4">{step.icon}</div>
-              
+
               <h3 className="text-lg font-semibold text-brandPrimary-900 mb-3">
                 {step.title}
               </h3>
-              
+
               <p className="text-brandPrimary-600 text-sm leading-relaxed">
                 {step.description}
               </p>
