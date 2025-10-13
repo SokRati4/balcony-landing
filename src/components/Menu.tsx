@@ -3,66 +3,123 @@ import { motion } from 'framer-motion'
 const menuItems = [
   {
     id: 1,
-    name: 'Котлета по-киевски с картофельным пюре',
+    name: 'Зразы с луком и яйцом + каша гречневая',
     weight: '300 г',
-    calories: '550 Ккал',
-    image: '🍗'
+    calories: '520 Ккал',
+    image: '🥚',
+    price: '5 BYN'
   },
   {
     id: 2,
-    name: 'Блинчики с ветчиной и сыром',
+    name: 'Спагетти «Болоньезе»',
     weight: '300 г',
-    calories: '480 Ккал',
-    image: '🥞'
+    calories: '600 Ккал',
+    image: '🍝',
+    price: '5 BYN'
   },
   {
     id: 3,
-    name: 'Бифштекс "Смак" с гречневой кашей',
+    name: 'Гуляш из свинины + макароны отварные',
     weight: '300 г',
-    calories: '600 Ккал',
-    image: '🥩'
+    calories: '550 Ккал',
+    image: '🍲',
+    price: '5 BYN'
   },
   {
     id: 4,
-    name: 'Голубцы со сметаной',
+    name: 'Отбивная куриная + пюре картофельное',
     weight: '300 г',
-    calories: '350 Ккал',
-    image: '🥟'
+    calories: '520 Ккал',
+    image: '🍗',
+    price: '5 BYN'
   },
   {
     id: 5,
-    name: 'Морской окунь с рисом',
+    name: 'Котлета «По-гусарски» + картофель отварной с зеленью',
     weight: '300 г',
-    calories: '420 Ккал',
-    image: '🐟'
+    calories: '560 Ккал',
+    image: '🍖',
+    price: '5 BYN'
   },
   {
     id: 6,
-    name: 'Куриные крылышки с картофелем "по-деревенски"',
+    name: 'Рыба под сыром + рис отварной',
     weight: '300 г',
-    calories: '580 Ккал',
-    image: '🍖'
+    calories: '480 Ккал',
+    image: '🐟',
+    price: '5 BYN'
   },
   {
     id: 7,
-    name: 'Мясо по-французски с перловой кашей',
+    name: '«Чахохбили» из курицы + картофельное пюре',
     weight: '300 г',
-    calories: '530 Ккал',
-    image: '🥩'
+    calories: '500 Ккал',
+    image: '🍗',
+    price: '5 BYN'
   },
   {
     id: 8,
-    name: 'Гуляш с макаронами',
+    name: 'Котлета «Домашняя» + каша гречневая',
     weight: '300 г',
-    calories: '490 Ккал',
-    image: '🍝'
+    calories: '540 Ккал',
+    image: '🍖',
+    price: '5 BYN'
   },
   {
     id: 9,
-    name: 'Колдуны со сметаной',
+    name: '«Жаркое» из свинины',
     weight: '300 г',
-    calories: '520 Ккал',
-    image: '🥔'
+    calories: '530 Ккал',
+    image: '🥘',
+    price: '5 BYN'
+  },
+  {
+    id: 10,
+    name: 'Филе куриное запечённое с помидором под сыром + рис',
+    weight: '300 г',
+    calories: '500 Ккал',
+    image: '🍗',
+    price: '5 BYN'
+  },
+  {
+    id: 11,
+    name: 'Котлета куриная + рис отварной',
+    weight: '300 г',
+    calories: '480 Ккал',
+    image: '🍗',
+    price: '5 BYN'
+  },
+  {
+    id: 12,
+    name: 'Тефтели в томатном соусе + спагетти',
+    weight: '300 г',
+    calories: '580 Ккал',
+    image: '🍝',
+    price: '5 BYN'
+  },
+  {
+    id: 13,
+    name: 'Шницель из свинины + каша гречневая',
+    weight: '300 г',
+    calories: '620 Ккал',
+    image: '🥩',
+    price: '5 BYN'
+  },
+  {
+    id: 14,
+    name: 'Картофельные оладьи с мачанкой',
+    weight: '300 г',
+    calories: '680 Ккал',
+    image: '🥔',
+    price: '5 BYN'
+  },
+  {
+    id: 15,
+    name: 'Голубцы (со сметаной)',
+    weight: '300 г',
+    calories: '450 Ккал',
+    image: '🥬',
+    price: '5 BYN'
   }
 ]
 
@@ -108,6 +165,9 @@ const Menu = () => {
                     {item.calories}
                   </p>
                 </div>
+                <p className="text-brandPrimary-900 font-semibold text-sm mt-2">
+                  {item.price || '5 BYN'}
+                </p>
               </div>
             </motion.div>
           ))}
