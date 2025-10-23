@@ -1,7 +1,7 @@
 import { useEffect, useRef, useState } from 'react'
 import { AnimatePresence, motion } from 'framer-motion'
 import { Menu, X, Phone } from 'lucide-react'
-import logo from '../assets/logo.jpg' // Импортируем логотип
+import logo from '../assets/logo.webp' // Импортируем логотип
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false)

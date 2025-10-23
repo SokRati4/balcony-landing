@@ -1,10 +1,10 @@
 import { motion } from 'framer-motion'
-import React, { useState, useEffect, useMemo } from 'react'
+import { useState, useEffect, useMemo } from 'react'
 import { AnimatePresence } from 'framer-motion'
 
-import img1 from '../assets/IMG_1466.png'
-import img2 from '../assets/IMG_1523.png'
-import img3 from '../assets/IMG_1620.png'
+import img1 from '../assets/IMG_1466.webp'
+import img2 from '../assets/IMG_1523.webp'
+import img3 from '../assets/IMG_1620.webp'
 
 const About = () => {
   const images = useMemo(() => [img1, img2, img3], [])
@@ -89,7 +89,7 @@ const About = () => {
                 alt={`Блюдо ${currentImageIndex + 1}`}
                 decoding="async"
                 loading={currentImageIndex === 0 ? 'eager' : 'lazy'}
-                fetchPriority={currentImageIndex === 0 ? 'high' : 'low'}
+                fetchPriority={currentImageIndex === 0 ? 'high' : 'auto'}
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
                 exit={{ opacity: 0 }}
