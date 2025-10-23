@@ -44,7 +44,14 @@ const Header = () => {
           {/* Logo */}
           <div className="flex items-center">
             <div className="text-2xl font-bold text-brandPrimary-900">
-              <img src={logo} alt="Балконы лого" className="h-24 w-auto" />
+              <img
+                src={logo}
+                alt="Балконы логотип"
+                className="h-24 w-auto"
+                loading="lazy"
+                decoding="async"
+                fetchPriority="low"
+              />
             </div>
           </div>
 
