@@ -29,10 +29,16 @@ const Footer = () => {
               Режим работы: 11:00-16:00
             </p>
           </div>
-
           <div className="mt-8 mx-[calc(50%-50vw)] border-t border-brandPrimary-800"></div>
           <div className="pt-8">
-            <img src={bePaidLogos} alt="bePaid Logo" className="mx-auto h-12 md:h-16 px-3" />
+            <img
+              src={bePaidLogos}
+              alt="bePaid Logo"
+              className="mx-auto h-12 md:h-16 px-3"
+              loading="lazy"
+              decoding="async"
+              fetchPriority="low"
+            />
           </div>
         </motion.div>
       </div>

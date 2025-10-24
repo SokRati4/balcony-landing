@@ -1,7 +1,7 @@
 import { useEffect, useRef, useState } from 'react'
 import { AnimatePresence, motion } from 'framer-motion'
 import { Menu, X, Phone } from 'lucide-react'
-import logo from '../assets/logo.jpg' // Импортируем логотип
+import logo from '../assets/logo.webp' // Импортируем логотип
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
@@ -44,7 +44,14 @@ const Header = () => {
           {/* Logo */}
           <div className="flex items-center">
             <div className="text-2xl font-bold text-brandPrimary-900">
-              <img src={logo} alt="Балконы лого" className="h-24 w-auto" />
+              <img
+                src={logo}
+                alt="Балконы логотип"
+                className="h-24 w-auto"
+                loading="lazy"
+                decoding="async"
+                fetchPriority="low"
+              />
             </div>
           </div>
 

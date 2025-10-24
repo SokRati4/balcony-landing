@@ -1,13 +1,13 @@
 import { motion } from 'framer-motion'
-import { useState, useEffect } from 'react'
+import { useState, useEffect, useMemo } from 'react'
 import { AnimatePresence } from 'framer-motion'
 
-import img1 from '../assets/IMG_1466.png'
-import img2 from '../assets/IMG_1523.png'
-import img3 from '../assets/IMG_1620.png'
+import img1 from '../assets/IMG_1466.webp'
+import img2 from '../assets/IMG_1523.webp'
+import img3 from '../assets/IMG_1620.webp'
 
 const About = () => {
-  const images = [img1, img2, img3]
+  const images = useMemo(() => [img1, img2, img3], [])
   const [currentImageIndex, setCurrentImageIndex] = useState(0)
 
   useEffect(() => {
@@ -17,6 +17,27 @@ const About = () => {
 
     return () => clearInterval(timer)
   }, [images.length])
+
+  // Preload all hero images ASAP and hint the browser to fetch them
+  useEffect(() => {
+    images.forEach((src) => {
+      const linkEl = document.createElement('link')
+      linkEl.rel = 'preload'
+      linkEl.as = 'image'
+      linkEl.href = src
+      document.head.appendChild(linkEl)
+
+      const img = new Image()
+      img.decoding = 'async'
+      img.src = src
+    })
+
+    return () => {
+      // Optional: cleanup preload hints to avoid duplicates on HMR in dev
+      const links = document.querySelectorAll('link[rel="preload"][as="image"]')
+      links.forEach((l) => l.parentElement?.removeChild(l))
+    }
+  }, [images])
 
   return (
     <section id="about" className="relative bg-brandSecondary py-8 md:py-16 overflow-hidden">
@@ -61,11 +82,14 @@ const About = () => {
           className="relative"
         >
           <div className="relative w-full h-80 md:h-96 overflow-hidden rounded-2xl shadow-lg lg:mx-8">
-            <AnimatePresence mode="wait">
+            <AnimatePresence>
               <motion.img
                 key={currentImageIndex}
                 src={images[currentImageIndex]}
                 alt={`Блюдо ${currentImageIndex + 1}`}
+                decoding="async"
+                loading={currentImageIndex === 0 ? 'eager' : 'lazy'}
+                fetchPriority={currentImageIndex === 0 ? 'high' : 'auto'}
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
                 exit={{ opacity: 0 }}
